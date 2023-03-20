@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="action_crudman_connection" model="ir.actions.act_window">
+        <field name="name">HTTP module</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">connection</field>
+        <field name="view_mode">tree,form</field><!--witch view-->
+        <field name="context">{}</field> 
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">
+                Create your first Connection:
+            </p>
+        </field>
+    </record>
+
+    <menuitem id="menu_connection" 
+            action="action_crudman_connection"
+            name="Connection"
+            parent="menu_crudman_master"
+            sequence="10" />
+</odoo>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <menuitem id="crudman_root_menu" 
+              name="Crudman"
+              sequence="0" />
+
+    <menuitem id="menu_crudman_master" 
+              name="Crudman Details"
+              parent="crudman_root_menu"
+              sequence="0" />
+
+</odoo>
