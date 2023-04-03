@@ -21,7 +21,7 @@
             sequence="10" />
 
     <record id="view_workspace_search" model="ir.ui.view">
-        <field name="model">workspace.search</field>
+        <field name="name">workspace.search</field>
         <field name="model">workspace</field>
         <field name="arch" type="xml">
             <search>

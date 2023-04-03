@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="action_request" model="ir.actions.act_window">
+        <field name="name">Request</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">workspace.request.lines</field>
+        <field name="view_mode">tree,form,search</field><!--witch view-->
+        <field name="context">{'search_default_group_by_workspace_id':1}</field> 
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">
+                Create your first Request:
+            </p>
+        </field>
+    </record>
+
+    <menuitem id="menu_request" 
+            action="action_request"
+            name="Request"
+            parent="menu_crudman_master"
+            sequence="10" />
+
+    <record id="view_workspace_request_lines_search" model="ir.ui.view">
+        <field name="name">workspace.request.lines.search</field>
+        <field name="model">workspace.request.lines</field>
+        <field name="arch" type="xml">
+            <search>
+                <field name="name" string="Request name"/>
+                <field name="http_method" string="HTTP method"/>
+                <field name="url"/>
+            </search>
+        </field>
+    </record>
+
+     <record id="view_workspace_request_lines_form" model="ir.ui.view">
+        <field name="name">workspace_request_lines.form</field>
+        <field name="model">workspace.request.lines</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <header>
+                        
+                    </header>
+                    <div class="oe_title">
+                        <h1>
+                            <field name="name"/>
+                        </h1>
+                    </div>
+                    <label for="url" class="custom_allign" string="url"/>
+                            <div> 
+                                <field name="url" string="url" colspan = "2"/>
+                            </div>
+                    <group>
+                        <group>
+                            <field name="http_method" string="HTTP method"/>
+                            <field name="nbr_request" string="number of request"/>
+                        </group>
+                    </group>
+                </sheet>    
+            </form>
+        </field>
+    </record>
+
+    <record id="view_workspace_request_lines_tree" model="ir.ui.view">
+        <field name="name">workspace.request.lines.tree</field>
+        <field name="model">workspace.request.lines</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="name" string="Request name"/>
+                <field name="http_method" string="HTTP method"/>
+                <field name="url"/>
+            </tree>
+        </field>
+    </record>
+
+</odoo>
+
