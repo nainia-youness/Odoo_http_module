@@ -1,2 +1,4 @@
 id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
-access.connection,access_connection,crudman.model_connection,base.group_user,1,1,1,1
+access.workspace,access_workspace,crudman.model_workspace,base.group_user,1,1,1,1
+access.workspace.request.lines,access_workspace_request_lines,crudman.model_workspace_request_lines,base.group_user,1,1,1,1
+access.request.response,access_request_response,crudman.model_request_response,base.group_user,1,1,1,1

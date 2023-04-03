@@ -16,7 +16,7 @@
     'data': [
         'security/ir.model.access.csv',
         'views/menu.xml',
-        'views/connection_view.xml',
+        'views/workspace_view.xml',
     ],#all the data files including XML and CSV files that needed to be loaded when installing the module
     'demo': [],#list of data files that are only loaded when demonstration mode is activated during module installation
     'qweb': [],#loading all your qweb templates

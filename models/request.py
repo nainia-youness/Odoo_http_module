@@ -2,7 +2,7 @@
 from odoo import fields, models
 
 class  Request(models.Model):
-    _name = 'request'
+    _name = 'workspace.request.lines'
     _description = 'Request'
     name = fields.Char(string='Name')
     http_method= fields.Selection([
@@ -16,4 +16,4 @@ class  Request(models.Model):
     )
     url = fields.Char(string='Url')
     nbr_request=fields.Integer(string='Number of requests')
-    
+    workspace_id=fields.Many2one("workspace",string="Appointment")
