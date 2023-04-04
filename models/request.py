@@ -15,5 +15,6 @@ class  Request(models.Model):
         default='get'
     )
     url = fields.Char(string='Url')
-    nbr_request=fields.Integer(string='Number of requests')
+    nbr_request=fields.Integer(string='Number of requests',default=1)
     workspace_id=fields.Many2one("workspace",string="Appointment")
+    query_line_ids=fields.One2many('request.query.lines',"request_id",string="Query Lines")

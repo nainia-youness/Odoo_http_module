@@ -6,7 +6,7 @@
         <field name="type">ir.actions.act_window</field>
         <field name="res_model">workspace.request.lines</field>
         <field name="view_mode">tree,form,search</field><!--witch view-->
-        <field name="context">{'search_default_group_by_workspace_id':1}</field> 
+        <field name="context">{'search_default_group_by_workspace':1}</field> 
         <field name="help" type="html">
             <p class="o_view_nocontent_smiling_face">
                 Create your first Request:
@@ -28,6 +28,10 @@
                 <field name="name" string="Request name"/>
                 <field name="http_method" string="HTTP method"/>
                 <field name="url"/>
+                <filter name="http_method" string="GET requests" domain="[('http_method','=','get')]"/>
+                <group expand="0" string="Group By">
+                    <filter string="Group by Workspace" name="group_by_workspace" domain="" context="{'group_by':'workspace_id'}"/>
+                </group>
             </search>
         </field>
     </record>
@@ -55,7 +59,32 @@
                             <field name="http_method" string="HTTP method"/>
                             <field name="nbr_request" string="number of request"/>
                         </group>
+                        <group>
+                            <field name="workspace_id" string="Workspace"/>
+                        </group>
                     </group>
+                    <notebook>
+                        <page string="Query" name="query">
+                            <group>
+                                <field name="query_line_ids">
+                                    <tree editable="bottom">
+                                        <field name="key"/>
+                                        <field name="value"/>
+                                        <field name="description"/>
+                                        <field name="active"/>
+                                    </tree>
+                                    <form>
+                                        <group>
+                                            <field name="key"/>
+                                            <field name="value"/>
+                                            <field name="description"/>
+                                            <field name="active"/>
+                                        </group>
+                                    </form>
+                                </field>
+                            </group>
+                        </page>
+                    </notebook>
                 </sheet>    
             </form>
         </field>

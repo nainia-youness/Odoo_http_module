@@ -54,19 +54,12 @@
                         <page string="Request" name="request">
                             <group>
                                 <field name="request_line_ids">
-                                    <tree editable="bottom">
+                                    <tree editable="none" create="false" delete="false">
                                     <!-- bottom -->
-                                        <field name="name"/>
-                                        <field name="http_method"/>
-                                        <field name="url"/>
+                                        <field name="name" readonly="1"/>
+                                        <field name="http_method" readonly="1"/>
+                                        <field name="url" readonly="1"/>
                                     </tree>
-                                    <form>
-                                        <group>
-                                            <field name="name"/>
-                                            <field name="http_method"/>
-                                            <field name="url"/>
-                                        </group>
-                                    </form>
                                 </field>
                             </group>
                         </page>
