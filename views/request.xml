@@ -64,7 +64,7 @@
                         </group>
                     </group>
                     <notebook>
-                        <page string="Query" name="query">
+                        <page string="Query parameters" name="query">
                             <group>
                                 <field name="query_line_ids">
                                     <tree editable="bottom">
@@ -73,14 +73,38 @@
                                         <field name="description"/>
                                         <field name="active"/>
                                     </tree>
-                                    <form>
+                                    <!-- <form>
                                         <group>
                                             <field name="key"/>
                                             <field name="value"/>
                                             <field name="description"/>
                                             <field name="active"/>
                                         </group>
-                                    </form>
+                                    </form> -->
+                                </field>
+                            </group>
+                        </page>
+                        <page string="Headers" name="header">
+                            <group>
+                                <field name="header_line_ids">
+                                    <tree editable="bottom">
+                                        <field name="key"/>
+                                        <field name="value"/>
+                                        <field name="description"/>
+                                        <field name="active"/>
+                                    </tree>
+                                </field>
+                            </group>
+                        </page>
+                        <page string="Cookies" name="cookie">
+                            <group>
+                                <field name="cookie_line_ids">
+                                    <tree editable="bottom">
+                                        <field name="key"/>
+                                        <field name="value"/>
+                                        <field name="description"/>
+                                        <field name="active"/>
+                                    </tree>
                                 </field>
                             </group>
                         </page>

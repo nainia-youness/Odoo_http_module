@@ -3,3 +3,5 @@ access.workspace,access_workspace,crudman.model_workspace,base.group_user,1,1,1,
 access.workspace.request.lines,access_workspace_request_lines,crudman.model_workspace_request_lines,base.group_user,1,1,1,1
 access.request.response,access_request_response,crudman.model_request_response,base.group_user,1,1,1,1
 access.request.query.lines,access_request_query_lines,crudman.model_request_query_lines,base.group_user,1,1,1,1
+access.request.header.lines,access_request_header_lines,crudman.model_request_header_lines,base.group_user,1,1,1,1
+access.request.cookie.lines,access_request_cookie_lines,crudman.model_request_cookie_lines,base.group_user,1,1,1,1

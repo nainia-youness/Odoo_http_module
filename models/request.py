@@ -17,4 +17,6 @@ class  Request(models.Model):
     url = fields.Char(string='Url')
     nbr_request=fields.Integer(string='Number of requests',default=1)
     workspace_id=fields.Many2one("workspace",string="Appointment")
-    query_line_ids=fields.One2many('request.query.lines',"request_id",string="Query Lines")
+    query_line_ids=fields.One2many('request.query.lines',"request_id",string="Query params")
+    header_line_ids=fields.One2many('request.header.lines',"request_id",string="Headers")
+    cookie_line_ids=fields.One2many('request.cookie.lines',"request_id",string="Cookies")
