@@ -10,4 +10,9 @@
               parent="crudman_root_menu"
               sequence="0" />
 
+    <menuitem id="menu_crudman_configuration"
+          name="Configuration"
+          parent="crudman_root_menu"
+          sequence="1" />
+
 </odoo>

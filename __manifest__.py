@@ -15,9 +15,13 @@
     'css': [],#custom CSS files to be imported
     'data': [
         'security/ir.model.access.csv',
+        'data/sequence_data.xml',
+        'data/response.httpstatus.csv',
         'views/menu.xml',
         'views/request.xml',
         'views/workspace_view.xml',
+        'views/response.xml',
+        'views/http_status.xml'
     ],#all the data files including XML and CSV files that needed to be loaded when installing the module
     'demo': [],#list of data files that are only loaded when demonstration mode is activated during module installation
     'qweb': [],#loading all your qweb templates

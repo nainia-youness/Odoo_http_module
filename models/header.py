@@ -9,3 +9,4 @@ class  Header(models.Model):
     description = fields.Char(string='Description')
     active=fields.Boolean(string='Active',default=True)
     request_id=fields.Many2one('workspace.request.lines',string='Request')
+    response_id = fields.Many2one('request.response', string='Response')
