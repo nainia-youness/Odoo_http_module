@@ -4,12 +4,13 @@
     'name': 'Crudman', #A module is called by two names one is its technical name which is the main folder name where all the module related folders
     'version': '1.0.0',
     'sequence':-100,#the lower the sequence, the module will show first in apps
-    'author': 'Youness',
+    'author': 'Youness Nainia',
     'website': '',#website of author
-    'images': [''],#image path that will be set up as the banner of your module static/wherever
-    'category': 'webservice test module',
-    'summary': 'Module that helps testing webservices',
+    'images': ['static/description/icon.png','static/description/banner.gif'],#image path that will be set up as the banner of your module static/wherever
+    'category': 'Extra Tools',
+    'summary': 'Postman clone module that helps you test webservices',
     'description': """HTTP module""",
+    'license':'LGPL-3',
     'depends': [],#specify modules that this module deppend on (they will be loaded)
     'external_dependencies': {'python': [],'bin':[]},#python and binary dependencies 
     'css': [],#custom CSS files to be imported
